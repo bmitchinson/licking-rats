@@ -1,0 +1,53 @@
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("load", (event) => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    const container = document.getElementById("container");
+    container.appendChild(player);
+    player.style.width = "1000px";
+    player.load("LickingRats.swf");
+  });
+</script>
+<div id="center">
+  <div id="container"></div>
+</div>
+<div id="center">
+  <div id="text">
+    <p>For Art 🐀</p>
+    <p>Made in Elburn</p>
+    <p>
+      <a href="https://mitchinson.dev">http://mitchinson.dev</a>
+    </p>
+    <p>
+      Credit to "<a href="https://github.com/ruffle-rs/ruffle">Ruffle</a>" flash
+      emulator
+    </p>
+    <p>
+      Preservation of Utah Genetic Science Learning Center "<a
+        href="https://learn.genetics.utah.edu/content/epigenetics/rats"
+        >Lick Your Rats</a
+      >"
+    </p>
+    <p>Captured by Wayback Machine, April 2020</p>
+  </div>
+</div>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+<style>
+  #center {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  #text {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+  #text p {
+    margin: 0.6em 0;
+  }
+</style>
